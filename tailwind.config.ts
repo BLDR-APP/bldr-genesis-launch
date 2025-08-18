@@ -52,12 +52,6 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				bldr: {
-					gold: 'hsl(var(--bldr-gold))',
-					black: 'hsl(var(--bldr-black))',
-					dark: 'hsl(var(--bldr-dark))',
-					light: 'hsl(var(--bldr-light))'
-				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -67,7 +61,30 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// BLDR Custom Colors
+				'bldr-gold': {
+					DEFAULT: 'hsl(var(--bldr-gold))',
+					light: 'hsl(var(--bldr-gold-light))',
+					dark: 'hsl(var(--bldr-gold-dark))'
+				},
+				'bldr-black': {
+					DEFAULT: 'hsl(var(--bldr-black))',
+					light: 'hsl(var(--bldr-black-light))',
+					medium: 'hsl(var(--bldr-black-medium))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-card': 'var(--gradient-card)'
+			},
+			boxShadow: {
+				'gold': 'var(--shadow-gold)',
+				'elegant': 'var(--shadow-elegant)'
+			},
+			transitionProperty: {
+				'smooth': 'var(--transition-smooth)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
