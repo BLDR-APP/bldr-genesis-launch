@@ -11,7 +11,7 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      value: "contato@bldr.app",
+      value: "contato@bldrapp.com.br",
       description: "Respondemos em até 24 horas"
     },
     {
@@ -23,7 +23,7 @@ const Contact = () => {
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Endereço",
-      value: "São Paulo, SP",
+      value: "Belo Horizonte, MG",
       description: "Brasil"
     },
     {
