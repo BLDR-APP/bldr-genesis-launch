@@ -4,10 +4,6 @@ import { Smartphone, Zap, Target, Users, Star, Download } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-fitness.jpg";
-import Eu from "src/assets/images/Eu.png";
-import Viana from "src/assets/images/Viana.png";
-import Carcs from "src/assets/images/Carcs.png";
-import JR from "src/assets/images/JR.png";
 
 const Index = () => {
   const founders = [
@@ -15,25 +11,25 @@ const Index = () => {
       name: "Pedro Menin",
       role: "CEO & Fundador",
       description: "Visionário por trás do app, lidera a estratégia e a construção do futuro da plataforma fitness, conectando inovação e comunidade.",
-      image: Eu,
+      image: "src/assets/images/Eu.png"
     },
     {
       name: "Pedro Lacerda",
       role: "CBO & Co-fundador", 
       description: "Especialista em networking e expansão, responsável por fechar parcerias estratégicas com marcas, academias e players do mercado fitness.",
-      image: Viana,
+      image: "https://imgur.com/a/gATOLQK"
     },
     {
       name: "Arthur Carvalho",
       role: "CFO & Co-fundador",
       description: "Cuida da saúde financeira da empresa, estrutura modelos de monetização e prepara o terreno para investidores e crescimento sustentável.",
-      image: Carcs,
+      image: "https://imgur.com/a/VHrpKMX"
     },
     {
       name: "João Luiz Rocha",
       role: "CSO & Co-fundador",
       description: "Apaixonado por treino e academia, traz conhecimento técnico para garantir que o app seja referência em performance, saúde e bem-estar.",
-      image: JR,
+      image: "https://imgur.com/a/blCHULH"
     }
   ];
 
