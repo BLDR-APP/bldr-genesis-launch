@@ -11,7 +11,7 @@ const Index = () => {
       name: "Pedro Menin",
       role: "CEO & Fundador",
       description: "Visionário por trás do app, lidera a estratégia e a construção do futuro da plataforma fitness, conectando inovação e comunidade.",
-      image: "https://imgur.com/a/RxH510D"
+      image: "src/assets/images/Eu.png"
     },
     {
       name: "Pedro Lacerda",
