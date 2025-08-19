@@ -11,25 +11,25 @@ const Index = () => {
       name: "Pedro Menin",
       role: "CEO & Fundador",
       description: "Visionário por trás do app, lidera a estratégia e a construção do futuro da plataforma fitness, conectando inovação e comunidade.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face"
+      image: "https://imgur.com/a/RxH510D"
     },
     {
       name: "Pedro Lacerda",
       role: "CBO & Co-fundador", 
       description: "Especialista em networking e expansão, responsável por fechar parcerias estratégicas com marcas, academias e players do mercado fitness.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face"
+      image: "https://imgur.com/a/gATOLQK"
     },
     {
       name: "Arthur Carvalho",
       role: "CFO & Co-fundador",
       description: "Cuida da saúde financeira da empresa, estrutura modelos de monetização e prepara o terreno para investidores e crescimento sustentável.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face"
+      image: "https://imgur.com/a/VHrpKMX"
     },
     {
       name: "João Luiz Rocha",
       role: "CSO & Co-fundador",
       description: "Apaixonado por treino e academia, traz conhecimento técnico para garantir que o app seja referência em performance, saúde e bem-estar.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face"
+      image: "https://imgur.com/a/blCHULH"
     }
   ];
 
