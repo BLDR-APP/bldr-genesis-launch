@@ -35,7 +35,7 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email Sócios",
-      value: "pedro.menin@bldrapp.com.br | pedro.lacerda@bldrapp.com.br | joao.rocha@bldrapp.com.br | arthur.carvalho@bldrapp.com.br",
+      value: "pedro.menin@bldrapp.com.br pedro.lacerda@bldrapp.com.br joao.rocha@bldrapp.com.br arthur.carvalho@bldrapp.com.br",
       description: "Respondemos em até 24 horas"
     }
   ];
