@@ -50,10 +50,10 @@ const About = () => {
               <p className="text-muted-foreground leading-relaxed mb-4">
                 O BLDR nasceu da paixão de quatro amigos por fitness e tecnologia. Frustrados com apps 
                 genéricos que não entregavam resultados reais, decidimos criar algo diferente: uma 
-                plataforma que realmente entende cada usuário e adapta-se às suas necessidades específicas.
+                plataforma que realmente entendesse cada usuário e adapta-se às suas necessidades específicas.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Em 2025, após dois anos de pesquisa e desenvolvimento, lançamos o BLDR com o objetivo 
+                Em 2025, após meses de pesquisa e desenvolvimento, lançamos o BLDR com o objetivo 
                 de democratizar o acesso a treinos de alta qualidade e acompanhamento profissional.
               </p>
               <p className="text-muted-foreground leading-relaxed">
