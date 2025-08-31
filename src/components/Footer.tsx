@@ -60,8 +60,8 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-muted-foreground text-sm">
-            CNPJ: 62.211.700/0001-82
             © {new Date().getFullYear()} BLDR. Todos os direitos reservados.
+            CNPJ: 62.211.700/0001-82
           </p>
         </div>
       </div>
