@@ -9,25 +9,25 @@ const Index = () => {
   const founders = [
     {
       name: "Pedro Menin",
-      role: "CEO & Fundador",
+      role: "Sócio & Fundador",
       description: "Visionário por trás do app, lidera a estratégia e a construção do futuro da plataforma fitness, conectando inovação e comunidade.",
       image: "/Eu.png"
     },
     {
       name: "Pedro Lacerda",
-      role: "CBO & Co-fundador", 
+      role: "Sócio & Co-fundador", 
       description: "Especialista em networking e expansão, responsável por fechar parcerias estratégicas com marcas, academias e players do mercado fitness.",
       image: "/Viana.png"
     },
     {
       name: "Arthur Carvalho",
-      role: "CFO & Co-fundador",
+      role: "Sócio & Co-fundador",
       description: "Cuida da saúde financeira da empresa, estrutura modelos de monetização e prepara o terreno para investidores e crescimento sustentável.",
       image: "/Carcs.png"
     },
     {
       name: "João Luiz Rocha",
-      role: "CSO & Co-fundador",
+      role: "Sócio & Co-fundador",
       description: "Apaixonado por treino e academia, traz conhecimento técnico para garantir que o app seja referência em performance, saúde e bem-estar.",
       image: "/JR.png"
     }
