@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Smartphone, Zap, Target, Users, Star, Download, CiLink } from "lucide-react";
+import { Smartphone, Zap, Target, Users, Star, Download, Link } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-fitness.jpg";
@@ -55,7 +55,7 @@ const Index = () => {
       description: "Interface simples e elegante para uma experiência premium"
     },
     {
-      icon: <CiLink className="h-6 w-6" />,
+      icon: <Link className="h-6 w-6" />,
       title: "Integrações",
       description: "Integrações com os maiores players do mercado wellness: Oura Ring, Whoop, Apple Watch, Garmin, Galaxy Watch"
     }
