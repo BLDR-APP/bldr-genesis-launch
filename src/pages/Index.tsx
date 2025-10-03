@@ -53,6 +53,11 @@ const Index = () => {
       icon: <Smartphone className="h-6 w-6" />,
       title: "App Intuitivo",
       description: "Interface simples e elegante para uma experiência premium"
+    },
+    }
+      icon: <gr className="h-6 w-6" />,
+      title: "Integrações",
+      description: "Integrações com os maiores players do mercado wellness: Oura Ring, Whoop, Apple Watch, Garmin, Galaxy Watch"
     }
   ];
 
