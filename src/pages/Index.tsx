@@ -157,10 +157,10 @@ const Index = () => {
                         <ButtonMovingBorder
                             borderRadius="1.75rem"
                             className="bg-black text-white border-neutral-800 font-bold"
-                            borderClassName="borderClassName="bg-[radial-gradient(#FFD700_40%,transparent_60%)]"
+                            borderClassName="bg-[radial-gradient(#FFD700_40%,transparent_60%)]"
                         >
                             <span className="flex items-center gap-2">
-                                <Download className="h-5 w-5" /> Download App
+                                <Download className="h-5 w-5 text-[#FFD700]" /> Download App
                             </span>
                         </ButtonMovingBorder>
                     </ComingSoonDialog>
