@@ -85,7 +85,7 @@ export const Card = ({
           "0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003",
       }}
       // AQUI ESTÁ A MUDANÇA: mt-12 (mobile) e mt-24 (desktop) positivos!
-      className="max-w-[320px] md:max-w-[400px] mt-12 md:mt-24 mx-auto h-[650px] md:h-[850px] w-full border-[8px] border-[#4a4a4a] p-[6px] bg-[#222222] rounded-[55px] shadow-2xl relative"
+      className="max-w-[320px] md:max-w-[400px] mt-12 md:mt-40 mx-auto h-[650px] md:h-[850px] w-full border-[8px] border-[#4a4a4a] p-[6px] bg-[#222222] rounded-[55px] shadow-2xl relative"
     >
       {/* Dynamic Island e Speaker */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[120px] h-[35px] bg-black rounded-b-[20px] z-50 flex items-center justify-center">
