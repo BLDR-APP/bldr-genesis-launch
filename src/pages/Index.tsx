@@ -135,13 +135,13 @@ const Index = () => {
       <Navbar />
       
       {/* HERO SECTION */}
-      <section className="flex flex-col overflow-hidden bg-black relative pt-40 md:pt-48">
+      <section className="flex flex-col overflow-hidden bg-black relative pt-20 md:pt-24">
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
         
         <ContainerScroll
           titleComponent={
             <>
-              <h1 className="text-4xl md:text-8xl font-bold mb-6 mt-20 md:mt-32 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 leading-tight">
+              <h1 className="text-4xl md:text-8xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 leading-tight">
                 Construa sua <br />
                 <span className="text-[#FFD700] drop-shadow-md">MELHOR VERSÃO</span>
               </h1>
