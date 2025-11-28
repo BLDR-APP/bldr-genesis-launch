@@ -61,7 +61,7 @@ export const FloatingNav = ({
         )}
       >
         {/* LOGO BLDR DENTRO DA BARRA */}
-        <div className="font-bold text-xl tracking-wider text-white">
+        <div className="font-bold text-xl tracking-wider text-[#FFD700]">
             BLDR
         </div>
 
