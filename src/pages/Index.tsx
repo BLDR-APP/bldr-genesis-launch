@@ -141,7 +141,7 @@ const Index = () => {
         <ContainerScroll
           titleComponent={
             <>
-              <h1 className="text-4xl md:text-8xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 leading-tight">
+              <h1 className="text-4xl md:text-8xl font-bold mb-6 mt-20 md:mt-32 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 leading-tight">
                 Construa sua <br />
                 <span className="text-[#FFD700] drop-shadow-md">MELHOR VERSÃO</span>
               </h1>
