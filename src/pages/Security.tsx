@@ -1,212 +1,153 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Shield, Lock, Eye, Server, AlertTriangle, CheckCircle } from "lucide-react";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
+import { HoverEffect } from "@/components/ui/card-hover-effect";
+import { ShieldCheck, Lock, Eye, Server, AlertTriangle, CheckCircle2, FileText, Phone, Mail, Activity } from "lucide-react";
 
 const Security = () => {
+  // Dados para o Grid de Recursos (usando o HoverEffect)
   const securityFeatures = [
     {
-      icon: <Shield className="h-8 w-8" />,
       title: "Criptografia Avançada",
-      description: "Todos os dados são criptografados com padrão AES-256 em trânsito e em repouso."
+      description: "Todos os dados são criptografados com padrão AES-256 em trânsito e em repouso, garantindo confidencialidade total.",
+      icon: <ShieldCheck className="h-8 w-8 text-[#FFD700]" />
     },
     {
-      icon: <Lock className="h-8 w-8" />,
       title: "Autenticação Segura",
-      description: "Sistema de autenticação multifator para proteger sua conta contra acessos não autorizados."
+      description: "Sistema de autenticação multifator (MFA) para proteger sua conta contra acessos não autorizados.",
+      icon: <Lock className="h-8 w-8 text-[#FFD700]" />
     },
     {
-      icon: <Eye className="h-8 w-8" />,
       title: "Monitoramento 24/7",
-      description: "Monitoramento contínuo para detectar e prevenir atividades suspeitas ou maliciosas."
+      description: "Monitoramento contínuo para detectar e prevenir atividades suspeitas ou maliciosas em tempo real.",
+      icon: <Eye className="h-8 w-8 text-[#FFD700]" />
     },
     {
-      icon: <Server className="h-8 w-8" />,
       title: "Infraestrutura Segura",
-      description: "Servidores em datacenters certificados com as mais altas normas de segurança física e digital."
+      description: "Servidores em datacenters certificados com as mais altas normas de segurança física e digital.",
+      icon: <Server className="h-8 w-8 text-[#FFD700]" />
     }
   ];
 
-  const bestPractices = [
-    "Use uma senha forte e única para sua conta BLDR",
-    "Ative a autenticação de dois fatores quando disponível",
-    "Mantenha o aplicativo sempre atualizado",
-    "Não compartilhe suas credenciais com terceiros",
-    "Faça logout ao usar dispositivos compartilhados",
-    "Verifique regularmente a atividade de sua conta"
-  ];
-
-  const certifications = [
-    //{ name: "ISO 27001", description: "Certificação de Gestão de Segurança da Informação" },
-    { name: "LGPD", description: "Conformidade com a Lei Geral de Proteção de Dados" },
-    //{ name: "SOC 2", description: "Auditoria de Controles de Segurança e Disponibilidade" },
-    //{ name: "GDPR", description: "Conformidade com o Regulamento Geral de Proteção de Dados" }
-  ];
-
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-black text-white font-sans">
       <Navbar />
       
-      <div className="pt-24 pb-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Segurança e <span className="text-primary">Proteção</span>
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              Sua segurança é nossa prioridade máxima
-            </p>
-          </div>
+      <div className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        
+        {/* HEADER */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            Segurança e <span className="text-[#FFD700]">Proteção</span>
+          </h1>
+          <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
+            Sua segurança é nossa prioridade máxima
+          </p>
+        </div>
 
-          {/* Compromisso */}
-          <section className="mb-16">
-            <Card className="bg-gradient-hero border-border">
-              <CardHeader>
-                <CardTitle className="text-2xl text-center flex items-center justify-center gap-3">
-                  <Shield className="h-8 w-8 text-primary" />
-                  Nosso Compromisso com a Segurança
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-center text-lg text-muted-foreground">
-                  No BLDR, implementamos as mais avançadas tecnologias e práticas de segurança 
-                  para proteger seus dados pessoais, informações de saúde e privacidade. 
-                  Nossa abordagem de segurança é multicamada e está em constante evolução.
+        {/* COMPROMISSO (Destaque Principal) */}
+        <section className="mb-24">
+            <BackgroundGradient className="rounded-[22px] p-8 sm:p-12 bg-zinc-900 text-center">
+                <ShieldCheck className="h-12 w-12 text-[#FFD700] mx-auto mb-6" />
+                <h2 className="text-2xl font-bold text-white mb-4">Nosso Compromisso com a Segurança</h2>
+                <p className="text-zinc-300 max-w-3xl mx-auto leading-relaxed text-lg">
+                    No BLDR, implementamos as mais avançadas tecnologias e práticas de segurança para proteger seus dados pessoais, informações de saúde e privacidade. Nossa abordagem de segurança é multicamada e está em constante evolução.
                 </p>
-              </CardContent>
-            </Card>
-          </section>
+            </BackgroundGradient>
+        </section>
 
-          {/* Recursos de Segurança */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center">Recursos de Segurança</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {securityFeatures.map((feature, index) => (
-                <Card key={index} className="bg-gradient-card border-border hover:shadow-elegant transition-all duration-300">
-                  <CardHeader className="text-center">
-                    <div className="mx-auto mb-4 p-3 bg-gradient-primary rounded-full w-fit text-black">
-                      {feature.icon}
-                    </div>
-                    <CardTitle className="text-xl">{feature.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-center text-muted-foreground">
-                      {feature.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
+        {/* RECURSOS DE SEGURANÇA (Grid Interativo) */}
+        <section className="mb-24">
+            <h2 className="text-3xl font-bold mb-8 text-center text-white">Recursos de Segurança</h2>
+            <HoverEffect items={securityFeatures} />
+        </section>
+
+        {/* MELHORES PRÁTICAS E VULNERABILIDADE */}
+        <section className="mb-24 grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Lista de Práticas */}
+            <div>
+                <h3 className="text-2xl font-bold text-white mb-6">Melhores Práticas de Segurança</h3>
+                <p className="text-zinc-400 mb-6">Para garantir a máxima segurança de sua conta, recomendamos seguir estas práticas:</p>
+                
+                <ul className="space-y-4">
+                    {[
+                        "Use uma senha forte e única para sua conta BLDR",
+                        "Ative a autenticação de dois fatores quando disponível",
+                        "Mantenha o aplicativo sempre atualizado",
+                        "Não compartilhe suas credenciais com terceiros",
+                        "Faça logout ao usar dispositivos compartilhados",
+                        "Verifique regularmente a atividade de sua conta"
+                    ].map((item, index) => (
+                        <li key={index} className="flex items-start gap-3 text-zinc-300">
+                            <CheckCircle2 className="h-5 w-5 text-[#FFD700] flex-shrink-0 mt-0.5" />
+                            <span>{item}</span>
+                        </li>
+                    ))}
+                </ul>
             </div>
-          </section>
 
-          {/* Melhores Práticas */}
-          <section className="mb-16">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-3xl font-bold mb-6">Melhores Práticas de Segurança</h2>
-                <p className="text-muted-foreground mb-6">
-                  Para garantir a máxima segurança de sua conta, recomendamos seguir estas práticas:
+            {/* Card Relatório de Vulnerabilidade */}
+            <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-[#FFD700]/30 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                    <AlertTriangle className="h-6 w-6 text-[#FFD700]" />
+                    <h3 className="text-xl font-bold text-white">Relatório de Vulnerabilidade</h3>
+                </div>
+                <p className="text-zinc-400 mb-6 text-sm leading-relaxed">
+                    Se você descobrir uma vulnerabilidade de segurança, entre em contato conosco imediatamente através do nosso programa de divulgação responsável.
+                </p>
+                <div className="space-y-1">
+                    <p className="text-xs text-[#FFD700] font-bold uppercase tracking-wider">Email de Segurança</p>
+                    <p className="text-white font-medium">contato@bldrapp.com.br</p>
+                </div>
+            </div>
+        </section>
+
+        {/* CONFORMIDADE LGPD */}
+        <section className="mb-24">
+            <h2 className="text-3xl font-bold mb-8 text-center text-white">Certificações e Conformidade</h2>
+            <div className="max-w-md mx-auto bg-zinc-900 border border-zinc-800 rounded-xl p-6 flex items-center gap-4">
+                <div className="bg-[#FFD700]/10 p-3 rounded-full">
+                    <FileText className="h-8 w-8 text-[#FFD700]" />
+                </div>
+                <div>
+                    <h4 className="font-bold text-white text-lg">LGPD</h4>
+                    <p className="text-zinc-400 text-sm">Conformidade com a Lei Geral de Proteção de Dados</p>
+                </div>
+            </div>
+        </section>
+
+        {/* TRANSPARÊNCIA E CONTATO DE EMERGÊNCIA */}
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
+                <h3 className="text-xl font-bold text-white mb-4">Transparência em Segurança</h3>
+                <p className="text-zinc-400 text-sm mb-6">
+                    Acreditamos na transparência total com nossos usuários. Caso ocorra algum incidente de segurança, você será notificado imediatamente.
+                </p>
+                <div className="flex items-center gap-2 text-[#FFD700] font-medium bg-[#FFD700]/10 w-fit px-4 py-2 rounded-full text-sm">
+                    <Activity className="h-4 w-4" />
+                    Status atual: Todos os sistemas operando normalmente
+                </div>
+            </div>
+
+            <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
+                <h3 className="text-xl font-bold text-white mb-4">Contato de Segurança</h3>
+                <p className="text-zinc-400 text-sm mb-6">
+                    Para questões urgentes relacionadas à segurança, entre em contato com nossa equipe especializada:
                 </p>
                 <div className="space-y-3">
-                  {bestPractices.map((practice, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <p className="text-muted-foreground">{practice}</p>
+                    <div className="flex items-center gap-3 text-zinc-300">
+                        <Mail className="h-4 w-4 text-[#FFD700]" />
+                        <span>contato@bldrapp.com.br</span>
                     </div>
-                  ))}
+                    <div className="flex items-center gap-3 text-zinc-300">
+                        <Phone className="h-4 w-4 text-[#FFD700]" />
+                        <span>+55 (31) 2391-4743</span>
+                    </div>
                 </div>
-              </div>
-
-              <div>
-                <Card className="bg-gradient-card border-border h-fit">
-                  <CardHeader>
-                    <CardTitle className="text-xl flex items-center gap-2">
-                      <AlertTriangle className="h-6 w-6 text-primary" />
-                      Relatório de Vulnerabilidade
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">
-                      Se você descobrir uma vulnerabilidade de segurança, entre em contato 
-                      conosco imediatamente através do nosso programa de divulgação responsável.
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      <strong className="text-foreground">Email de Segurança:</strong><br />
-                      <span className="text-primary">contato@bldrapp.com.br</span>
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
             </div>
-          </section>
+        </section>
 
-          {/* Certificações */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center">Certificações e Conformidade</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {certifications.map((cert, index) => (
-                <Card key={index} className="bg-gradient-card border-border hover:shadow-gold transition-all duration-300">
-                  <CardContent className="flex items-center p-6">
-                    <div className="p-3 bg-gradient-primary rounded-full mr-4 text-black">
-                      <CheckCircle className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground text-lg">{cert.name}</h3>
-                      <p className="text-muted-foreground text-sm">{cert.description}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </section>
-
-          {/* Incidentes de Segurança */}
-          <section className="mb-16">
-            <Card className="bg-gradient-card border-border">
-              <CardHeader>
-                <CardTitle className="text-2xl">Transparência em Segurança</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Acreditamos na transparência total com nossos usuários. Caso ocorra algum 
-                  incidente de segurança que possa afetar seus dados, você será notificado 
-                  imediatamente através do aplicativo e por email.
-                </p>
-                <p className="text-muted-foreground">
-                  <strong className="text-foreground">Status atual:</strong> 
-                  <span className="text-primary ml-2">✓ Todos os sistemas operando normalmente</span>
-                </p>
-              </CardContent>
-            </Card>
-          </section>
-
-          {/* Contato de Segurança */}
-          <section>
-            <Card className="bg-gradient-hero border-border">
-              <CardHeader>
-                <CardTitle className="text-2xl text-center">Contato de Segurança</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-muted-foreground mb-4">
-                  Para questões relacionadas à segurança, entre em contato com nossa equipe especializada:
-                </p>
-                <div className="space-y-2">
-                  <p>
-                    <strong className="text-foreground">Email:</strong> 
-                    <span className="text-primary ml-2">contato@bldrapp.com.br</span>
-                  </p>
-                  <p>
-                    <strong className="text-foreground">Telefone de Emergência:</strong> 
-                    <span className="text-primary ml-2">+55 (31) 2391-4743</span>
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </section>
-        </div>
       </div>
-
       <Footer />
     </div>
   );
