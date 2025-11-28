@@ -7,22 +7,26 @@ import { Trophy, Users, Zap, Target } from "lucide-react";
 const About = () => {
   const values = [
     {
-      icon: <Trophy className="h-8 w-8" />,
+      // Adicionei 'text-[#FFD700]' aqui
+      icon: <Trophy className="h-8 w-8 text-[#FFD700]" />,
       title: "Excelência",
       description: "Buscamos sempre a perfeição em tudo que fazemos, oferecendo a melhor experiência possível."
     },
     {
-      icon: <Users className="h-8 w-8" />,
+      // E aqui
+      icon: <Users className="h-8 w-8 text-[#FFD700]" />,
       title: "Comunidade",
       description: "Acreditamos que juntos somos mais fortes. Nossa comunidade é o coração do BLDR."
     },
     {
-      icon: <Zap className="h-8 w-8" />,
+      // E aqui
+      icon: <Zap className="h-8 w-8 text-[#FFD700]" />,
       title: "Inovação",
       description: "Utilizamos tecnologia de ponta para revolucionar a forma como você treina."
     },
     {
-      icon: <Target className="h-8 w-8" />,
+      // E aqui
+      icon: <Target className="h-8 w-8 text-[#FFD700]" />,
       title: "Resultados",
       description: "Nosso foco é entregar resultados concretos e mensuráveis para nossos usuários."
     }
