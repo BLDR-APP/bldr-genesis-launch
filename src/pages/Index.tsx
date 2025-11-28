@@ -177,7 +177,7 @@ const Index = () => {
         >
           {/* MOCKUP IMAGE */}
           <img
-            src="/linear.webp" 
+            src="/Dashboard.png" 
             alt="BLDR App Interface"
             className="mx-auto rounded-2xl object-cover h-full w-full object-left-top draggable-false"
             draggable={false}
