@@ -135,7 +135,7 @@ const Index = () => {
       <Navbar />
       
       {/* HERO SECTION */}
-      <section className="flex flex-col overflow-hidden bg-black relative pt-28 md:pt-38">
+      <section className="flex flex-col overflow-hidden bg-black relative pt-38 md:pt-38">
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
         
         <ContainerScroll
