@@ -13,13 +13,13 @@ import { Smartphone, Zap, Target, Users, Star, Download, Link, Rocket, Check } f
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-// IMPORTS DOS EFEITOS ESPECIAIS (ACETERNITY)
+// IMPORTS DOS EFEITOS ESPECIAIS
 import { Spotlight } from "@/components/ui/spotlight";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import { ButtonMovingBorder } from "@/components/ui/moving-border";
 
-// --- SEU COMPONENTE ORIGINAL MANTIDO ---
+// Componente Pop-up "Em Breve"
 const ComingSoonDialog = ({ children }: { children: React.ReactNode }) => {
   return (
     <Dialog>
@@ -43,7 +43,6 @@ const ComingSoonDialog = ({ children }: { children: React.ReactNode }) => {
 };
 
 const Index = () => {
-  // --- SEUS DADOS ORIGINAIS ---
   const founders = [
     {
       name: "Pedro Menin",
@@ -132,11 +131,10 @@ const Index = () => {
   ];
 
   return (
-    // Forcei o BG Black e Text White para garantir o visual Dark Mode Premium
     <div className="min-h-screen bg-black text-white overflow-x-hidden font-sans">
       <Navbar />
       
-      {/* --- HERO SECTION COM EFEITOS 3D E SPOTLIGHT --- */}
+      {/* HERO SECTION */}
       <section className="flex flex-col overflow-hidden bg-black relative pt-10 md:pt-0">
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
         
@@ -153,8 +151,8 @@ const Index = () => {
                    O ecossistema fitness mais avançado do Brasil. Treinos personalizados, acompanhamento profissional e resultados garantidos.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4">
-                    {/* BOTÃO COM EFEITO BORDA MÓVEL */}
+                <div className="flex flex-col sm:flex-row gap-4 items-center">
+                    {/* BOTÃO HERO COM BORDA MÓVEL */}
                     <ComingSoonDialog>
                         <ButtonMovingBorder
                             borderRadius="1.75rem"
@@ -177,7 +175,7 @@ const Index = () => {
             </>
           }
         >
-          {/* PLACEHOLDER DO MOCKUP - Troque o src pela sua imagem real */}
+          {/* MOCKUP IMAGE */}
           <img
             src="/linear.webp" 
             alt="BLDR App Interface"
@@ -187,7 +185,7 @@ const Index = () => {
         </ContainerScroll>
       </section>
 
-      {/* --- FEATURES SECTION COM GLOW --- */}
+      {/* FEATURES SECTION */}
       <section className="py-20 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -217,7 +215,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* --- FOUNDERS SECTION (Mantida original mas com cores Dark) --- */}
+      {/* FOUNDERS SECTION */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -257,7 +255,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* --- PRICING SECTION (Seus planos originais adaptados para Dark) --- */}
+      {/* PRICING SECTION */}
       <section className="py-20 bg-[#0a0a0a] relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -328,7 +326,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* --- CTA SECTION --- */}
+      {/* CTA SECTION - AGORA COM O BOTÃO NOVO */}
       <section className="py-20 relative overflow-hidden bg-black">
         <Spotlight className="top-0 left-0 transform rotate-180 opacity-50" fill="#FFD700" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
@@ -339,12 +337,20 @@ const Index = () => {
             Junte-se à revolução fitness
           </p>
           
-          <ComingSoonDialog>
-            <Button size="lg" className="bg-[#FFD700] text-black font-semibold hover:bg-yellow-500 shadow-[0_0_20px_rgba(255,215,0,0.3)]">
-                <Download className="mr-2 h-5 w-5" />
-                Começar Agora - Grátis
-            </Button>
-          </ComingSoonDialog>
+          <div className="flex justify-center">
+            <ComingSoonDialog>
+                {/* BOTÃO CTA FINAL COM BORDA MÓVEL */}
+                <ButtonMovingBorder
+                    borderRadius="1.75rem"
+                    className="bg-zinc-900 text-white border-neutral-800 font-bold"
+                    borderClassName="bg-[radial-gradient(#FFD700_40%,transparent_60%)]"
+                >
+                    <span className="flex items-center gap-2">
+                        <Download className="h-5 w-5" /> Começar Agora
+                    </span>
+                </ButtonMovingBorder>
+            </ComingSoonDialog>
+          </div>
         </div>
       </section>
 
