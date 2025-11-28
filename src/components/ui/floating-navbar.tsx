@@ -8,6 +8,7 @@ import {
 import { cn } from "@/lib/utils";
 import { Download, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom"; // <--- IMPORTANTE: Adicionei este import
 import {
   Dialog,
   DialogContent,
@@ -17,10 +18,11 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
+// CORREÇÃO AQUI: Troquei 'a' por 'Link' e 'href' por 'to'
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
-    <a href={href} className="relative text-neutral-50 items-center flex space-x-1 hover:text-[#FFD700] transition-colors">
+    <Link to={href} className="relative text-neutral-50 items-center flex space-x-1 hover:text-[#FFD700] transition-colors">
         <span className="text-sm cursor-pointer">{children}</span>
-    </a>
+    </Link>
 );
 
 export const FloatingNav = ({
