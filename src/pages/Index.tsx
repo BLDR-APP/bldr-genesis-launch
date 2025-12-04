@@ -66,7 +66,7 @@ const Index = () => {
       name: "João Luiz Rocha",
       role: "Sócio & Co-fundador",
       description: "Apaixonado por treino e academia, traz conhecimento técnico para garantir que o app seja referência em performance, saúde e bem-estar.",
-      image: "/JL.png"
+      image: "/JL.jpg"
     }
   ];
 
