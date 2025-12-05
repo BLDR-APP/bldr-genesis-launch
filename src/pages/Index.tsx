@@ -148,7 +148,7 @@ const Index = () => {
               
               <div className="flex flex-col items-center justify-center gap-6 mt-8 mb-12">
                 <p className="font-normal text-base md:text-xl text-neutral-300 max-w-2xl text-center mx-auto">
-                   O ecossistema fitness mais avançado do Brasil. Treinos personalizados, acompanhamento profissional e resultados garantidos.
+                   O ecossistema para performance mais avançado do Brasil. Treinos personalizados, acompanhamento profissional e resultados garantidos.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 items-center">
