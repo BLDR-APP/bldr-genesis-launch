@@ -164,7 +164,7 @@ const Privacy = () => {
           {/* 10. Contato (DPO) */}
           <section className="border-t border-zinc-800 pt-12 mt-12">
             <h2 className="text-2xl font-bold text-white mb-8">10. Contato (DPO)</h2>
-            <p className="mb-6 text-zinc-400">Para exercer os seus direitos ou esclarecer dúvidas sobre privacidade, entre em contacto com nosso Encarregado de Dados:</p>
+            <p className="mb-6 text-zinc-400">Para exercer os seus direitos ou esclarecer dúvidas sobre privacidade, entre em contato com nosso suporte:</p>
             
             <div className="bg-zinc-900 border border-zinc-800 p-6 rounded-xl flex flex-col sm:flex-row items-center gap-6 hover:border-[#FFD700]/30 transition-colors">
                 <div className="bg-[#FFD700]/10 p-4 rounded-full">
@@ -172,7 +172,7 @@ const Privacy = () => {
                 </div>
                 <div className="text-center sm:text-left">
                     <p className="text-xs text-[#FFD700] uppercase font-bold tracking-wider mb-1">Encarregado de Dados</p>
-                    <p className="text-white font-medium text-lg">privacidade@bldr.app</p>
+                    <p className="text-white font-medium text-lg">contato@bldrapp.com.br</p>
                     <p className="text-zinc-500 mt-1">Responderemos em até 48 horas úteis.</p>
                 </div>
             </div>
