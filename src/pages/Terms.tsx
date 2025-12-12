@@ -129,7 +129,7 @@ const Terms = () => {
                     </div>
                     <div>
                         <p className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Email</p>
-                        <p className="text-white font-medium">contato@bldr.app</p>
+                        <p className="text-white font-medium">contato@bldrapp.com.br</p>
                     </div>
                 </div>
                  <div className="flex items-center gap-4 bg-zinc-900 p-5 rounded-xl border border-zinc-800 hover:border-[#FFD700]/30 transition-colors">
@@ -138,7 +138,7 @@ const Terms = () => {
                     </div>
                     <div>
                         <p className="text-xs text-zinc-500 uppercase tracking-wider font-bold">Telefone</p>
-                        <p className="text-white font-medium">+55 (11) 9999-9999</p>
+                        <p className="text-white font-medium">+55 (31) 2391-4743</p>
                     </div>
                 </div>
             </div>
