@@ -13,7 +13,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-muted-foreground text-sm max-w-md">
-              Transforme seu corpo e mente com o app de fitness mais avançado do mercado. 
+              Transforme seu corpo e mente com o app para performance mais avançado do mercado. 
               Treinos personalizados, acompanhamento profissional e resultados garantidos.
             </p>
           </div>
