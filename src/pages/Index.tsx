@@ -12,6 +12,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter }
 import { Smartphone, Zap, Target, Users, Star, Download, Link, Rocket, Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { HavokSection } from "@/components/HavokSection";
 
 // IMPORTS DOS EFEITOS ESPECIAIS
 import { Spotlight } from "@/components/ui/spotlight";
@@ -184,6 +185,8 @@ const Index = () => {
           />
         </ContainerScroll>
       </section>
+
+      <HavokSection />
 
       {/* FEATURES SECTION */}
       <section className="py-20 bg-[#0a0a0a]">
