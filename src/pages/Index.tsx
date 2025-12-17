@@ -102,7 +102,7 @@ const Index = () => {
   const plans = [
     {
       name: "Mensal",
-      price: "34,99",
+      price: "34,90",
       period: "/mês",
       description: "Flexibilidade total para o seu treino.",
       features: [
@@ -116,7 +116,7 @@ const Index = () => {
     },
     {
       name: "Anual",
-      price: "200,00",
+      price: "199,99",
       period: "/ano",
       description: "Economize mais de 50% no plano anual.",
       subPrice: "Equivalente a R$ 16,66/mês",
