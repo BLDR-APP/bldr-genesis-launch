@@ -40,7 +40,9 @@ export const Tabs = ({
     <>
       <div
         className={cn(
-          "flex flex-row items-center justify-center [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
+          // AJUSTE 1: 'justify-start' no mobile (para permitir scroll) e 'md:justify-center' no desktop
+          // AJUSTE 2: 'overflow-x-auto' para garantir que rola se não couber
+          "flex flex-row items-center justify-start md:justify-center [perspective:1000px] relative overflow-x-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full h-auto py-2",
           containerClassName
         )}
       >
@@ -53,7 +55,8 @@ export const Tabs = ({
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
             className={cn(
-              "relative px-4 py-2 rounded-full",
+              // AJUSTE 3: Padding menor no mobile (px-3 py-1.5) para caber melhor na tela
+              "relative px-3 py-1.5 md:px-4 md:py-2 rounded-full whitespace-nowrap",
               tabClassName
             )}
             style={{
@@ -85,7 +88,7 @@ export const Tabs = ({
         active={active}
         key={active.value}
         hovering={hovering}
-        className={cn("mt-12", contentClassName)}
+        className={cn("mt-8 md:mt-12", contentClassName)}
       />
     </>
   );
