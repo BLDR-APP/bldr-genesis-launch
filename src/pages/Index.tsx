@@ -9,10 +9,10 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-// Adicionei Brain, Utensils, LineChart e Medal nos imports
+// NOVOS IMPORTS: Footprints, Droplets, Camera, Dumbbell
 import { 
   Smartphone, Zap, Target, Users, Star, Download, Link, Rocket, Check,
-  Brain, Utensils, LineChart, Medal 
+  Brain, Utensils, LineChart, Medal, Footprints, Droplets, Camera, Dumbbell
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -103,42 +103,43 @@ const Index = () => {
     }
   ];
 
-  // NOVA: Seção Detalhada (Funcionalidades) - Adaptada para o tema Dark
+  // SEÇÃO DETALHADA ATUALIZADA COM AS CORREÇÕES
   const detailedFeatures = [
     {
       icon: <Brain className="h-8 w-8 text-[#FFD700]" />,
-      title: "Smart Coach IA",
-      description: "Não é apenas um gerador de treino aleatório. Nossa IA analisa seu sono, recuperação e progressão de carga para ajustar seu treino diariamente."
+      title: "IA & Chef Inteligente",
+      description: "Treinos baseados no seu TDEE ou modo 'Treino Livre'. Além disso, nossa IA gera receitas completas com macros calculados usando seus ingredientes ou tipos de refeição."
     },
     {
-      icon: <Utensils className="h-8 w-8 text-[#FFD700]" />,
-      title: "Nutrição Flexível",
-      description: "Calcule seus macros automaticamente. Escaneie códigos de barras, registre refeições e receba sugestões do que comer para bater a meta."
+      icon: <Droplets className="h-8 w-8 text-[#FFD700]" />,
+      title: "Nutrição Automática",
+      description: "Calculadora de calorias e macros automática ao registrar refeições. Acompanhe também sua ingestão diária de água de forma simples."
     },
     {
       icon: <LineChart className="h-8 w-8 text-[#FFD700]" />,
-      title: "Analytics de Performance",
-      description: "Visualize sua evolução com gráficos detalhados de volume de carga, peso corporal, PRs (Recordes Pessoais) e consistência."
+      title: "Dashboard de Performance",
+      description: "Gráficos de evolução corporal (Peso, Gordura, Músculo), Heatmap de constância de treino, aderência à dieta e diário de fotos (Antes/Depois)."
     },
     {
-      icon: <Medal className="h-8 w-8 text-[#FFD700]" />,
-      title: "Gamificação & Rankings",
-      description: "Suba de nível, ganhe badges exclusivas e compita amigavelmente com seus amigos para ver quem mantém a maior constância."
+      icon: <Footprints className="h-8 w-8 text-[#FFD700]" />,
+      title: "BLDR CLUB & Corrida",
+      description: "Experiência Premium: Gamificação com recompensas, Biblioteca Exclusiva, IA HAVOK e Modo Corrida com rastreamento via GPS."
     }
   ];
 
+  // PLANOS ATUALIZADOS COM AS NOVAS FEATURES
   const plans = [
     {
       name: "Mensal",
       price: "34,90",
       period: "/mês",
-      description: "Flexibilidade total para o seu treino.",
+      description: "Comece sua jornada no BLDR CLUB.",
       features: [
-        "Acesso completo ao App",
-        "Treinos gerados por IA",
-        "Dieta personalizada",
-        "Integração com Smartwatches",
-        "Cancele quando quiser"
+        "Acesso à IA HAVOK e Chef IA",
+        "Modo Corrida (GPS Integrado)",
+        "Biblioteca de Treinos Exclusiva",
+        "Gamificação e Recompensas",
+        "Analytics Avançados & Fotos"
       ],
       highlight: false
     },
@@ -150,9 +151,9 @@ const Index = () => {
       subPrice: "Equivalente a R$ 16,66/mês",
       features: [
         "Todos os benefícios do Mensal",
+        "Badge 'Founder' na Comunidade",
+        "Prioridade total no suporte",
         "Acesso antecipado a novas features",
-        "Prioridade no suporte",
-        "Badges exclusivos na comunidade",
         "Melhor custo-benefício"
       ],
       highlight: true
@@ -246,7 +247,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* NOVA SEÇÃO: Funcionalidades Detalhadas (Por dentro do App) */}
+      {/* SEÇÃO DETALHADA: Por dentro do App */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -318,9 +319,9 @@ const Index = () => {
       <section className="py-20 bg-[#0a0a0a] relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-white">Invista em Você</h2>
+            <h2 className="text-4xl font-bold mb-4 text-white">Seja <span className="text-[#FFD700]">BLDR CLUB</span></h2>
             <p className="text-xl text-neutral-400">
-              Planos simples e transparentes. Sem taxas escondidas.
+              Desbloqueie todo o seu potencial com o plano premium.
             </p>
           </div>
 
@@ -375,7 +376,7 @@ const Index = () => {
                         }`} 
                         size="lg"
                     >
-                        Começar Agora
+                        Quero ser CLUB
                     </Button>
                   </ComingSoonDialog>
                 </CardFooter>
@@ -385,7 +386,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA SECTION - AGORA COM O BOTÃO NOVO */}
+      {/* CTA SECTION */}
       <section className="py-20 relative overflow-hidden bg-black">
         <Spotlight className="top-0 left-0 transform rotate-180 opacity-50" fill="#FFD700" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
@@ -393,7 +394,7 @@ const Index = () => {
             Pronto para <span className="text-[#FFD700]">CONSTRUIR</span> seu futuro?
           </h2>
           <p className="text-xl text-neutral-400 mb-8 max-w-2xl mx-auto">
-            Junte-se à revolução fitness
+            Junte-se à revolução fitness e faça parte do clube.
           </p>
           
           <div className="flex justify-center">
