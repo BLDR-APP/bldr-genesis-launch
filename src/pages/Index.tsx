@@ -9,7 +9,11 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-import { Smartphone, Zap, Target, Users, Star, Download, Link, Rocket, Check } from "lucide-react";
+// Adicionei Brain, Utensils, LineChart e Medal nos imports
+import { 
+  Smartphone, Zap, Target, Users, Star, Download, Link, Rocket, Check,
+  Brain, Utensils, LineChart, Medal 
+} from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { HavokSection } from "@/components/HavokSection";
@@ -96,6 +100,30 @@ const Index = () => {
       icon: <Link className="h-6 w-6" />,
       title: "Integrações",
       description: "Estamos desenvolvendo integrações com os maiores players: Oura Ring, Whoop, Apple Watch, Garmin."
+    }
+  ];
+
+  // NOVA: Seção Detalhada (Funcionalidades) - Adaptada para o tema Dark
+  const detailedFeatures = [
+    {
+      icon: <Brain className="h-8 w-8 text-[#FFD700]" />,
+      title: "Smart Coach IA",
+      description: "Não é apenas um gerador de treino aleatório. Nossa IA analisa seu sono, recuperação e progressão de carga para ajustar seu treino diariamente."
+    },
+    {
+      icon: <Utensils className="h-8 w-8 text-[#FFD700]" />,
+      title: "Nutrição Flexível",
+      description: "Calcule seus macros automaticamente. Escaneie códigos de barras, registre refeições e receba sugestões do que comer para bater a meta."
+    },
+    {
+      icon: <LineChart className="h-8 w-8 text-[#FFD700]" />,
+      title: "Analytics de Performance",
+      description: "Visualize sua evolução com gráficos detalhados de volume de carga, peso corporal, PRs (Recordes Pessoais) e consistência."
+    },
+    {
+      icon: <Medal className="h-8 w-8 text-[#FFD700]" />,
+      title: "Gamificação & Rankings",
+      description: "Suba de nível, ganhe badges exclusivas e compita amigavelmente com seus amigos para ver quem mantém a maior constância."
     }
   ];
 
@@ -215,6 +243,34 @@ const Index = () => {
               </BackgroundGradient>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* NOVA SEÇÃO: Funcionalidades Detalhadas (Por dentro do App) */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold mb-4 text-white">Por dentro do <span className="text-[#FFD700]">BLDR</span></h2>
+                <p className="text-xl text-neutral-400">
+                    Ferramentas profissionais simplificadas para você
+                </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                {detailedFeatures.map((item, index) => (
+                    <div key={index} className="flex flex-col md:flex-row gap-6 items-start p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-[#FFD700]/50 transition-colors duration-300">
+                        <div className="flex-shrink-0 p-4 bg-zinc-800 rounded-xl">
+                            {item.icon}
+                        </div>
+                        <div>
+                            <h3 className="text-2xl font-bold mb-3 text-white">{item.title}</h3>
+                            <p className="text-zinc-400 leading-relaxed">
+                                {item.description}
+                            </p>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
       </section>
 
