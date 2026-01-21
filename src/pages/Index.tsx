@@ -140,7 +140,7 @@ const Index = () => {
         "Biblioteca de Treinos Exclusiva",
         "Gamificação e Recompensas",
         "Analytics Avançados & Fotos"
-        "Badge BLDR CLUB no Perfil",
+        "Tag BLDR CLUB no Perfil",
       ],
       highlight: false
     },
