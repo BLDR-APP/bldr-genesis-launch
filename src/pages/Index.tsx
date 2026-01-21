@@ -140,6 +140,7 @@ const Index = () => {
         "Biblioteca de Treinos Exclusiva",
         "Gamificação e Recompensas",
         "Analytics Avançados & Fotos"
+        "Badge 'BLDR CLUB' no Perfil",
       ],
       highlight: false
     },
@@ -151,9 +152,6 @@ const Index = () => {
       subPrice: "Equivalente a R$ 16,66/mês",
       features: [
         "Todos os benefícios do Mensal",
-        "Badge 'Founder' na Comunidade",
-        "Prioridade total no suporte",
-        "Acesso antecipado a novas features",
         "Melhor custo-benefício"
       ],
       highlight: true
