@@ -139,8 +139,8 @@ const Index = () => {
         "Modo Corrida (GPS Integrado)",
         "Biblioteca de Treinos Exclusiva",
         "Gamificação e Recompensas",
-        "Analytics Avançados & Fotos"
-        "Tag BLDR CLUB no Perfil",
+        "Analytics Avançados & Fotos",
+        "Badge 'BLDR CLUB' no Perfil",
       ],
       highlight: false
     },
