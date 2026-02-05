@@ -176,7 +176,7 @@ const Index = () => {
               
               <div className="flex flex-col items-center justify-center gap-6 mt-8 mb-12">
                 <p className="font-normal text-base md:text-xl text-neutral-300 max-w-2xl text-center mx-auto">
-                   O ecossistema para performance mais avançado do Brasil. Treinos personalizados, acompanhamento profissional e resultados garantidos.
+                   O ecossistema definitivo para sua performance. Domine seus treinos, controle sua dieta e monitore sua evolução em um único lugar.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 items-center">
