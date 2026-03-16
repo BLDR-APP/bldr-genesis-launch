@@ -1,18 +1,9 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-// NOVOS IMPORTS: Footprints, Droplets, Camera, Dumbbell
 import { 
-  Smartphone, Zap, Target, Users, Star, Download, Link, Rocket, Check,
-  Brain, Utensils, LineChart, Medal, Footprints, Droplets, Camera, Dumbbell
+  Smartphone, Zap, Target, Users, Star, Link, Check,
+  Brain, Utensils, LineChart, Footprints, Droplets
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -23,29 +14,6 @@ import { Spotlight } from "@/components/ui/spotlight";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import { ButtonMovingBorder } from "@/components/ui/moving-border";
-
-// Componente Pop-up "Em Breve"
-const ComingSoonDialog = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <Dialog>
-      <DialogTrigger asChild>
-        {children}
-      </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] text-center flex flex-col items-center justify-center py-10 bg-zinc-950 border-zinc-800 text-white">
-        <div className="h-16 w-16 bg-[#FFD700]/10 rounded-full flex items-center justify-center mb-4">
-          <Rocket className="h-8 w-8 text-[#FFD700]" />
-        </div>
-        <DialogHeader className="items-center">
-          <DialogTitle className="text-2xl font-bold text-white">Em breve!</DialogTitle>
-          <DialogDescription className="text-center pt-2 text-base text-zinc-400">
-            Estamos finalizando os últimos detalhes. <br/>
-            Logo você terá acesso completo ao <strong className="text-[#FFD700]">BLDR</strong>.
-          </DialogDescription>
-        </DialogHeader>
-      </DialogContent>
-    </Dialog>
-  );
-};
 
 const Index = () => {
   const founders = [
@@ -103,7 +71,6 @@ const Index = () => {
     }
   ];
 
-  // SEÇÃO DETALHADA ATUALIZADA COM AS CORREÇÕES
   const detailedFeatures = [
     {
       icon: <Brain className="h-8 w-8 text-[#FFD700]" />,
@@ -127,7 +94,6 @@ const Index = () => {
     }
   ];
 
-  // PLANOS ATUALIZADOS COM AS NOVAS FEATURES
   const plans = [
     {
       name: "Mensal",
@@ -179,26 +145,51 @@ const Index = () => {
                    O ecossistema definitivo para sua performance. Domine seus treinos, controle sua dieta e monitore sua evolução em um único lugar.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 items-center">
-                    {/* BOTÃO HERO COM BORDA MÓVEL */}
-                    <ComingSoonDialog>
-                        <ButtonMovingBorder
-                            borderRadius="1.75rem"
-                            className="bg-black text-white border-neutral-800 font-bold"
-                            borderClassName="bg-[radial-gradient(#FFD700_40%,transparent_60%)]"
-                        >
-                            <span className="flex items-center gap-2">
-                                <Download className="h-5 w-5 text-[#FFD700]" /> Download App
-                            </span>
-                        </ButtonMovingBorder>
-                    </ComingSoonDialog>
-                    
-                    <ComingSoonDialog>
-                        <Button variant="outline" size="lg" className="h-14 rounded-[1.75rem] border-neutral-700 text-white hover:bg-neutral-800 px-8 bg-transparent">
-                            Ver Demonstração
-                        </Button>
-                    </ComingSoonDialog>
+                {/* BOTÕES DAS LOJAS (COM BORDA ANIMADA) */}
+                <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-4 w-full px-4">
+                  <a
+                    href="https://apps.apple.com/app/bldr/id6754264412"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto"
+                  >
+                    <ButtonMovingBorder
+                      borderRadius="1.2rem"
+                      className="bg-zinc-900 text-white border-neutral-800 flex items-center gap-3 h-14 px-6 w-full hover:bg-zinc-800 transition-all"
+                      borderClassName="bg-[radial-gradient(#FFD700_40%,transparent_60%)]"
+                    >
+                      <svg viewBox="0 0 384 512" width="28" height="28" fill="currentColor">
+                        <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
+                      </svg>
+                      <div className="text-left flex flex-col">
+                        <span className="text-[10px] leading-none text-zinc-400 font-medium mb-0.5">Baixar na</span>
+                        <span className="text-lg font-bold leading-tight">App Store</span>
+                      </div>
+                    </ButtonMovingBorder>
+                  </a>
+
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.bldr_fitness.app&pcampaignid=web_share"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto"
+                  >
+                    <ButtonMovingBorder
+                      borderRadius="1.2rem"
+                      className="bg-zinc-900 text-white border-neutral-800 flex items-center gap-3 h-14 px-6 w-full hover:bg-zinc-800 transition-all"
+                      borderClassName="bg-[radial-gradient(#FFD700_40%,transparent_60%)]"
+                    >
+                      <svg viewBox="0 0 512 512" width="28" height="28" fill="currentColor">
+                        <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
+                      </svg>
+                      <div className="text-left flex flex-col">
+                        <span className="text-[10px] leading-none text-zinc-400 font-medium mb-0.5">DISPONÍVEL NO</span>
+                        <span className="text-lg font-bold leading-tight">Google Play</span>
+                      </div>
+                    </ButtonMovingBorder>
+                  </a>
                 </div>
+
               </div>
             </>
           }
@@ -365,18 +356,18 @@ const Index = () => {
                   </ul>
                 </CardContent>
                 <CardFooter className="pt-8">
-                  <ComingSoonDialog>
+                  <a href="#download" className="w-full">
                     <Button 
                         className={`w-full ${
                         plan.highlight 
-                            ? "bg-[#FFD700] text-black font-bold hover:bg-yellow-500" 
-                            : "bg-zinc-800 text-white hover:bg-zinc-700"
-                        }`} 
+                            ? "bg-[#FFD700] text-black font-bold hover:bg-yellow-500 hover:scale-105" 
+                            : "bg-zinc-800 text-white hover:bg-zinc-700 hover:scale-105"
+                        } transition-all duration-300`} 
                         size="lg"
                     >
-                        Quero ser CLUB
+                        Assinar e Baixar
                     </Button>
-                  </ComingSoonDialog>
+                  </a>
                 </CardFooter>
               </Card>
             ))}
@@ -384,8 +375,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA SECTION */}
-      <section className="py-20 relative overflow-hidden bg-black">
+      {/* CTA SECTION - AGORA COM ID DOWNLOAD */}
+      <section id="download" className="py-20 relative overflow-hidden bg-black">
         <Spotlight className="top-0 left-0 transform rotate-180 opacity-50" fill="#FFD700" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
@@ -395,19 +386,49 @@ const Index = () => {
             Junte-se à revolução fitness e faça parte do clube.
           </p>
           
-          <div className="flex justify-center">
-            <ComingSoonDialog>
-                {/* BOTÃO CTA FINAL COM BORDA MÓVEL */}
-                <ButtonMovingBorder
-                    borderRadius="1.75rem"
-                    className="bg-zinc-900 text-white border-neutral-800 font-bold"
-                    borderClassName="bg-[radial-gradient(#FFD700_40%,transparent_60%)]"
-                >
-                    <span className="flex items-center gap-2">
-                        <Download className="h-5 w-5" /> Começar Agora
-                    </span>
-                </ButtonMovingBorder>
-            </ComingSoonDialog>
+          {/* BOTÕES DAS LOJAS NO RODAPÉ (COM BORDA ANIMADA) */}
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-4 w-full max-w-md mx-auto px-4">
+            <a
+              href="COLE_O_LINK_DA_APP_STORE_AQUI"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full"
+            >
+              <ButtonMovingBorder
+                borderRadius="1.2rem"
+                className="bg-zinc-900 text-white border-neutral-800 flex items-center gap-3 h-14 px-6 w-full hover:bg-zinc-800 transition-all"
+                borderClassName="bg-[radial-gradient(#FFD700_40%,transparent_60%)]"
+              >
+                <svg viewBox="0 0 384 512" width="28" height="28" fill="currentColor">
+                  <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
+                </svg>
+                <div className="text-left flex flex-col">
+                  <span className="text-[10px] leading-none text-zinc-400 font-medium mb-0.5">Baixar na</span>
+                  <span className="text-lg font-bold leading-tight">App Store</span>
+                </div>
+              </ButtonMovingBorder>
+            </a>
+
+            <a
+              href="COLE_O_LINK_DO_GOOGLE_PLAY_AQUI"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full"
+            >
+              <ButtonMovingBorder
+                borderRadius="1.2rem"
+                className="bg-zinc-900 text-white border-neutral-800 flex items-center gap-3 h-14 px-6 w-full hover:bg-zinc-800 transition-all"
+                borderClassName="bg-[radial-gradient(#FFD700_40%,transparent_60%)]"
+              >
+                <svg viewBox="0 0 512 512" width="28" height="28" fill="currentColor">
+                  <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
+                </svg>
+                <div className="text-left flex flex-col">
+                  <span className="text-[10px] leading-none text-zinc-400 font-medium mb-0.5">DISPONÍVEL NO</span>
+                  <span className="text-lg font-bold leading-tight">Google Play</span>
+                </div>
+              </ButtonMovingBorder>
+            </a>
           </div>
         </div>
       </section>
