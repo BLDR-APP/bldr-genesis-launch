@@ -6,17 +6,9 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Download, Rocket } from "lucide-react";
+import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
 
 // AJUSTE 1: Fonte menor no mobile (text-xs) para caber tudo
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
@@ -83,31 +75,16 @@ export const FloatingNav = ({
 
         {/* BOTÃO DOWNLOAD (Escondido no Mobile) */}
         <div className="hidden md:block">
-            <Dialog>
-                <DialogTrigger asChild>
-                    <Button 
-                        size="sm" 
-                        className="bg-[#FFD700] text-black font-bold hover:bg-yellow-500 rounded-full px-4 h-9"
-                    >
-                        <span className="flex items-center gap-2 text-xs sm:text-sm">
-                            <Download className="h-4 w-4" /> Download
-                        </span>
-                    </Button>
-                </DialogTrigger>
-                
-                <DialogContent className="sm:max-w-[425px] text-center flex flex-col items-center justify-center py-10 bg-zinc-950 border-zinc-800 text-white">
-                    <div className="h-16 w-16 bg-[#FFD700]/10 rounded-full flex items-center justify-center mb-4">
-                    <Rocket className="h-8 w-8 text-[#FFD700]" />
-                    </div>
-                    <DialogHeader className="items-center">
-                    <DialogTitle className="text-2xl font-bold text-white">Em breve!</DialogTitle>
-                    <DialogDescription className="text-center pt-2 text-base text-zinc-400">
-                        Estamos finalizando os últimos detalhes. <br/>
-                        Logo você terá acesso completo ao <strong className="text-[#FFD700]">BLDR</strong>.
-                    </DialogDescription>
-                    </DialogHeader>
-                </DialogContent>
-            </Dialog>
+            <a href="#download">
+                <Button 
+                    size="sm" 
+                    className="bg-[#FFD700] text-black font-bold hover:bg-yellow-500 rounded-full px-4 h-9 transition-transform hover:scale-105"
+                >
+                    <span className="flex items-center gap-2 text-xs sm:text-sm">
+                        <Download className="h-4 w-4" /> Download
+                    </span>
+                </Button>
+            </a>
         </div>
 
       </motion.div>
