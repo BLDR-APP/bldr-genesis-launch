@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import {
   Smartphone, Zap, Target, Users, Star, Link, Check,
@@ -375,23 +376,101 @@ const Index = () => {
                     ))}
                   </ul>
                 </CardContent>
-                <CardFooter className="pt-8">
-                  <a href="#download" className="w-full">
-                    <Button 
-                        className={`w-full ${
-                        plan.highlight 
-                            ? "bg-[#FFD700] text-black font-bold hover:bg-yellow-500 hover:scale-105" 
-                            : "bg-zinc-800 text-white hover:bg-zinc-700 hover:scale-105"
-                        } transition-all duration-300`} 
-                        size="lg"
+                <CardFooter className="pt-8 flex flex-col gap-2">
+                  <a
+                    href="https://apps.apple.com/app/bldr/id6754264412"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full"
+                  >
+                    <Button
+                      className={`w-full ${
+                        plan.highlight
+                          ? "bg-[#FFD700] text-black font-bold hover:bg-yellow-500 hover:scale-105"
+                          : "bg-zinc-800 text-white hover:bg-zinc-700 hover:scale-105"
+                      } transition-all duration-300`}
+                      size="lg"
                     >
-                        Assinar e Baixar
+                      Baixar na App Store
+                    </Button>
+                  </a>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.bldr_fitness.app&pcampaignid=web_share"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full"
+                  >
+                    <Button
+                      variant="outline"
+                      className={`w-full border-zinc-700 ${
+                        plan.highlight
+                          ? "text-[#FFD700] border-[#FFD700]/40 hover:bg-[#FFD700]/10"
+                          : "text-zinc-300 hover:bg-zinc-800"
+                      } transition-all duration-300`}
+                      size="lg"
+                    >
+                      Baixar no Google Play
                     </Button>
                   </a>
                 </CardFooter>
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ SECTION */}
+      <section className="py-20 bg-[#0a0a0a]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 text-white">
+              Perguntas <span className="text-[#FFD700]">Frequentes</span>
+            </h2>
+            <p className="text-xl text-neutral-400">
+              Tire suas dúvidas antes de começar
+            </p>
+          </div>
+
+          <Accordion type="single" collapsible className="space-y-3">
+            <AccordionItem value="q1" className="bg-zinc-900 border border-zinc-800 rounded-xl px-6 data-[state=open]:border-[#FFD700]/40 transition-colors duration-300">
+              <AccordionTrigger className="text-white font-semibold text-left hover:no-underline py-5">
+                O app é gratuito?
+              </AccordionTrigger>
+              <AccordionContent className="text-zinc-400 pb-5 leading-relaxed">
+                O download é gratuito. Funcionalidades básicas são acessíveis sem custo, mas o acesso ao HAVOK IA, receitas personalizadas, modo corrida e outros recursos premium exigem o <span className="text-[#FFD700] font-semibold">BLDR CLUB</span> (plano Mensal ou Anual).
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="q2" className="bg-zinc-900 border border-zinc-800 rounded-xl px-6 data-[state=open]:border-[#FFD700]/40 transition-colors duration-300">
+              <AccordionTrigger className="text-white font-semibold text-left hover:no-underline py-5">
+                Funciona sem internet?
+              </AccordionTrigger>
+              <AccordionContent className="text-zinc-400 pb-5 leading-relaxed">
+                Algumas funcionalidades básicas funcionam offline, mas os recursos de IA — como a geração de treinos e receitas pelo HAVOK — exigem conexão com a internet.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="q3" className="bg-zinc-900 border border-zinc-800 rounded-xl px-6 data-[state=open]:border-[#FFD700]/40 transition-colors duration-300">
+              <AccordionTrigger className="text-white font-semibold text-left hover:no-underline py-5">
+                Posso cancelar quando quiser?
+              </AccordionTrigger>
+              <AccordionContent className="text-zinc-400 pb-5 leading-relaxed">
+                Sim. Usuários iOS podem cancelar a qualquer momento diretamente pela App Store, sem multa ou fidelidade. Para os demais, o cancelamento é feito entrando em contato pelo e-mail{" "}
+                <a href="mailto:contato@bldrapp.com.br" className="text-[#FFD700] hover:underline">
+                  contato@bldrapp.com.br
+                </a>.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="q4" className="bg-zinc-900 border border-zinc-800 rounded-xl px-6 data-[state=open]:border-[#FFD700]/40 transition-colors duration-300">
+              <AccordionTrigger className="text-white font-semibold text-left hover:no-underline py-5">
+                O HAVOK é realmente uma IA?
+              </AccordionTrigger>
+              <AccordionContent className="text-zinc-400 pb-5 leading-relaxed">
+                Sim. O HAVOK é um sistema de inteligência artificial integrado ao BLDR que analisa seu perfil, objetivos e histórico para gerar treinos e receitas únicos para você — não são planos genéricos.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
