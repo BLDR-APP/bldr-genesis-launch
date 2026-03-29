@@ -1,9 +1,10 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-import { 
+import {
   Smartphone, Zap, Target, Users, Star, Link, Check,
-  Brain, Utensils, LineChart, Footprints, Droplets
+  Brain, Utensils, LineChart, Footprints, Droplets,
+  Download, UserPlus, ClipboardList, Sparkles
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -163,6 +164,67 @@ const Index = () => {
       </section>
 
       <HavokSection />
+
+      {/* COMO FUNCIONA SECTION */}
+      <section className="py-20 bg-[#0a0a0a]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 text-white">
+              Como <span className="text-[#FFD700]">Funciona</span>?
+            </h2>
+            <p className="text-xl text-neutral-400">
+              Do download ao primeiro treino personalizado em minutos
+            </p>
+          </div>
+
+          <div className="relative">
+            {/* Linha conectora (visível apenas em desktop) */}
+            <div className="hidden lg:block absolute top-10 left-[calc(12.5%+1rem)] right-[calc(12.5%+1rem)] h-px bg-gradient-to-r from-transparent via-[#FFD700]/40 to-transparent" />
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+              {[
+                {
+                  step: "01",
+                  icon: <Download className="w-6 h-6" />,
+                  title: "Baixe o App",
+                  description: "Disponível gratuitamente na App Store e Google Play.",
+                },
+                {
+                  step: "02",
+                  icon: <UserPlus className="w-6 h-6" />,
+                  title: "Crie sua Conta",
+                  description: "Cadastre-se com e-mail, Apple ID ou conta Google em segundos.",
+                },
+                {
+                  step: "03",
+                  icon: <ClipboardList className="w-6 h-6" />,
+                  title: "Faça o Onboarding",
+                  description: "Informe seus dados (peso, altura, objetivo e nível de atividade). O BLDR calcula seu TDEE e metas calóricas automaticamente.",
+                },
+                {
+                  step: "04",
+                  icon: <Sparkles className="w-6 h-6" />,
+                  title: "A IA Assume",
+                  description: "Com o BLDR CLUB, o HAVOK monta sua ficha de treinos e receitas personalizadas com base no seu perfil.",
+                },
+              ].map((item, index) => (
+                <div key={index} className="flex flex-col items-center text-center">
+                  <div className="relative mb-6">
+                    <div className="w-20 h-20 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-[#FFD700] shadow-[0_0_20px_rgba(255,215,0,0.1)]">
+                      {item.icon}
+                    </div>
+                    <span className="absolute -top-2 -right-2 bg-[#FFD700] text-black text-xs font-black w-6 h-6 rounded-full flex items-center justify-center leading-none">
+                      {item.step}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-sm text-zinc-400 leading-relaxed">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* FEATURES SECTION */}
       <section className="py-20 bg-[#0a0a0a]">
