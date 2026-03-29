@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="icon" href="/favicon.ico" />
+
+    <title>BLDR | Construa sua Melhor Versão</title>
+    
+    <meta name="description" content="O ecossistema para performance mais avançado do Brasil. Treinos personalizados por IA, nutrição inteligente e gamificação" />
+    
+    <meta name="keywords" content="fitness, treino, musculação, app fitness, BLDR, personal trainer ia, havok ia, academia, hipertrofia" />
+    <meta name="author" content="BLDR Team" />
+
+    <meta property="og:title" content="BLDR | Construa sua Melhor Versão" />
+    <meta property="og:description" content="O ecossistema definitivo para sua performance. Domine seus treinos, controle sua dieta e monitore sua evolução em um único lugar." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.bldrapp.com.br/" />
+    <meta property="og:image" content="https://www.bldrapp.com.br/og-image.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bldr_app" />
+    <meta name="twitter:title" content="BLDR | Construa sua melhor versão" />
+    <meta name="twitter:description" content="O ecossistema definitivo para sua performance. Domine seus treinos, controle sua dieta e monitore sua evolução em um único lugar." />
+    <meta name="twitter:image" content="https://www.bldrapp.com.br/og-image.png" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
